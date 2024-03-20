@@ -1,19 +1,18 @@
 openapi: 3.0.1
 info:
-  title: test2
+  title: test3
   description: ''
   version: '1.0'
 servers:
-  - url: https://apiopsapim-ilc.azure-api.net/test2
+  - url: https://apiopsapim-ilc.azure-api.net/test3
 paths:
-  /doit:
+  /dontdoit:
     get:
-      summary: doit
-      description: doit
-      operationId: doit
+      summary: dontdoit
+      operationId: dontdoit
       responses:
         '200':
-          description: ''
+          description: 
 components:
   securitySchemes:
     apiKeyHeader:

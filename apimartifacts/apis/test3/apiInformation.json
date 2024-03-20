@@ -3,13 +3,12 @@
     "apiRevision": "1",
     "authenticationSettings": {},
     "description": "",
-    "displayName": "test2",
+    "displayName": "test3",
     "isCurrent": true,
-    "path": "test2",
+    "path": "test3",
     "protocols": [
       "https"
     ],
-    "serviceUrl": "https://apiopsapim-ilc.azure-api.net/test2",
     "subscriptionKeyParameterNames": {
       "header": "Ocp-Apim-Subscription-Key",
       "query": "subscription-key"
