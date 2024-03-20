@@ -53,7 +53,7 @@ jobs:
   #Publish with Commit ID
   Push-Changes-To-APIM-Test-With-Commit-ID:
     if: (github.event.inputs.COMMIT_ID_CHOICE == 'publish-artifacts-in-last-commit' || github.event.inputs.COMMIT_ID_CHOICE == '')
-    needs: get-commit
+    needs: [get-commit, Push-Changes-To-APIM-Dev-With-Commit-ID]
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: test # change this to match the test environment created in settings
@@ -64,7 +64,7 @@ jobs:
   #Publish without Commit ID. Publishes all artifacts that reside in the artifacts forlder
   Push-Changes-To-APIM-Test-Without-Commit-ID:
     if: ( github.event.inputs.COMMIT_ID_CHOICE == 'publish-all-artifacts-in-repo' )
-    needs: get-commit
+    needs: [get-commit, Push-Changes-To-APIM-Dev-Without-Commit-ID]
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: test # change this to match the test environment created in settings
@@ -73,7 +73,7 @@ jobs:
 
   Push-Changes-To-APIM-Prod-With-Commit-ID:
     if: (github.event.inputs.COMMIT_ID_CHOICE == 'publish-artifacts-in-last-commit' || github.event.inputs.COMMIT_ID_CHOICE == '')
-    needs: [get-commit, Push-Changes-To-APIM-Dev-With-Commit-ID]
+    needs: [get-commit, Push-Changes-To-APIM-Test-With-Commit-ID]
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: prod # change this to match the prod environment created in settings
@@ -84,7 +84,7 @@ jobs:
 
   Push-Changes-To-APIM-Prod-Without-Commit-ID:
     if: ( github.event.inputs.COMMIT_ID_CHOICE == 'publish-all-artifacts-in-repo' )
-    needs: [get-commit, Push-Changes-To-APIM-Dev-Without-Commit-ID]
+    needs: [get-commit, Push-Changes-To-APIM-Test-Without-Commit-ID]
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: prod # change this to match the prod environment created in settings
