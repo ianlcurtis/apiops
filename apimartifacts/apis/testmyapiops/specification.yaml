@@ -9,10 +9,11 @@ paths:
   /helloworld:
     get:
       summary: helloworld
+      description: helloworld
       operationId: helloworld
       responses:
         '200':
-          description: 
+          description: ''
 components:
   securitySchemes:
     apiKeyHeader:
