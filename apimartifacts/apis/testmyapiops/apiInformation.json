@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "",
+    "displayName": "testmyapiops",
+    "isCurrent": true,
+    "path": "test",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://apiopsapim-ilc.azure-api.net/test",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}
