@@ -9,7 +9,15 @@ paths:
   /helloworld:
     get:
       summary: helloworld
+      description: helloworld
       operationId: helloworld
+      responses:
+        '200':
+          description: ''
+  /goodbyeworld:
+    get:
+      summary: goodbyeworld
+      operationId: goodbyeworld
       responses:
         '200':
           description: 
