@@ -17,10 +17,11 @@ paths:
   /goodbyeworld:
     get:
       summary: goodbyeworld
+      description: goodbyeworld
       operationId: goodbyeworld
       responses:
         '200':
-          description: 
+          description: ''
 components:
   securitySchemes:
     apiKeyHeader:
