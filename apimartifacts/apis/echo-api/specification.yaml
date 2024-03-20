@@ -50,13 +50,6 @@ paths:
       responses:
         '200':
           description: ''
-    delete:
-      summary: Remove resource
-      description: A demonstration of a DELETE call which traditionally deletes the resource. It is based on the same "echo" backend as in all other operations so nothing is actually deleted.
-      operationId: remove-resource
-      responses:
-        '200':
-          description: ''
     head:
       summary: Retrieve header only
       description: The HEAD operation returns only headers. In this demonstration a policy is used to set additional headers when the response is returned and to enable JSONP.
