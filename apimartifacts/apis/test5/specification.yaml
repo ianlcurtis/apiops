@@ -1,19 +1,18 @@
 openapi: 3.0.1
 info:
-  title: test4
+  title: test5
   description: ''
   version: '1.0'
 servers:
-  - url: https://apiopsapim-ilc.azure-api.net/test4
+  - url: https://apiopsapim-ilc.azure-api.net/test5
 paths:
-  /doitalot:
+  /goodbyeworld:
     get:
-      summary: doitalot
-      description: doitalot
-      operationId: doitalot
+      summary: goodbyeworld
+      operationId: goodbyeworld
       responses:
         '200':
-          description: ''
+          description: 
 components:
   securitySchemes:
     apiKeyHeader:
